@@ -19,22 +19,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"/>
+    <script>
+        //para el tag del anho
+        window.addEventListener('load', function() {
+            const currentYear = new Date().getFullYear();
+            document.getElementById('footerYear').innerHTML = currentYear;
+        });
+    </script>
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "SIRE - Consultoría y Desarrollo de Software",
-  "image": "logo-sire.png",
-  "url": "https://www.sire.com.ec",
-  "telephone": "+593984135299", 
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Quito", 
-    "addressCountry": "EC"
-  },
-  "description": "Consultora de software en Ecuador especializada en herramientas Oracle y APEX con más de 25 años de experiencia.",
-  "yearsInOperation": "25"
-}
+        {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "SIRE - Consultoría y Desarrollo de Software",
+        "image": "logo-sire.png",
+        "url": "https://www.sire.com.ec",
+        "telephone": "+593984135299", 
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Quito", 
+            "addressCountry": "EC"
+        },
+        "description": "Consultora de software en Ecuador especializada en herramientas Oracle y APEX con más de 25 años de experiencia.",
+        "yearsInOperation": "25"
+        }
 </script>
     <style>
         :root {
@@ -256,7 +263,7 @@
     </section>
 
     <footer>
-        &copy; 2026 SIRE - Quito, Ecuador. Especialistas independientes en Suite de Herramientas Oracle & APEX.<br>
+        &copy; <span id="footerYear"></span> SIRE - Quito, Ecuador. Especialistas independientes en Suite de Herramientas Oracle & APEX.<br>
         Trayectoria nacional e internacional en sistemas de misión crítica.
     </footer>
 
